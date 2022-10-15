@@ -18,7 +18,7 @@ class DepthCalculator {
     // remove line with error and write your code here
   }
 }
-
+// return arr.reduce((count,v) => !Array.isArray(v) ? count : 1 + calculateDepth(v),1);
 module.exports = {
   DepthCalculator
 };
