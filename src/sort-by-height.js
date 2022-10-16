@@ -11,19 +11,19 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * The result should be [-1, 150, 160, 170, -1, -1, 180, 190]
  */
-function sortByHeight( a ) {
-    let aFiltered = a.filter(x => {
+function sortByHeight( arr ) {
+    let arrFiltered = arr.filter(x => {
         if(x !== -1 ){
             return x;
         }
     }).sort((a,b) => a-b);
     
-    for(let i = 0; i < a.length; i++) {
-        if(a[i] != -1) {
-            a[i] = aFiltered.shift();
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] != -1) {
+            arr[i] = arrFiltered.shift();
         }
     }
-    return a;
+    return arr;
 }
 
 

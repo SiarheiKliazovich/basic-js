@@ -19,7 +19,6 @@ function renameFiles( names ) {
   let Arr = [],
         obj = {};
     names.forEach(function(val){
-
         if(obj[val] === undefined){
             if(Arr.indexOf(val) === -1){
               Arr.push(val);  
@@ -28,7 +27,6 @@ function renameFiles( names ) {
               obj[val] = 1;
               Arr.push(val + "(" + obj[val] + ")" );
             }
-
         } else {
             Arr.push( val + "(" + (++obj[val]) + ")");
         }
